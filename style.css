@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+}
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.navbar-container {
+  display: flex;
+  /* background-color: aliceblue; */
+  height: 100%;
+  align-items: center;
+  color: white;
+  padding: 0px 50px;
+}
+.logo-container {
+  flex: 1;
+  /* background-color: red; */
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.menu-container {
+  flex: 6;
+  /* background-color: green; */
+}
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+.menu-list-item {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.menu-list-item.active {
+  font-weight: bold;
+}
+.profile-container {
+  flex: 2;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.profileTextContainer {
+  margin: 0px 10px;
+}
+
+.imgPic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.toggleBall {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  right: 1px;
+  cursor: pointer;
+}
+.toggleIcon {
+  color: gold;
+}
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.leftMenuIcon {
+  color: white;
+  cursor: pointer;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+.container{
+  background-color: black;
+  color: white;
+  height: calc(100% - 50px);
+}
+
+.contentContainer {
+  margin-left: 50px;
+}
+.featureContent {
+  height: 50vh;
+  padding: 50px;
+}
+.featureTitle {
+  width: 200px;
+}
+.featureDesc {
+  width: 500px;
+  margin: 30px 0px;
+  color: rgb(132, 127, 127);
+}
+
+.featureButton {
+  padding: 10px;
+  width: 100px;
+  background-color: rgb(238, 241, 245);
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+.featureButton:hover {
+  transform: scale(1.2);
+}
+
+
+.movieListContainer {
+  padding: 20px;
+}
+
+.movieListWrapper{
+  position: relative;
+  overflow: hidden;
+  
+}
+
+
+.movieListItem {
+  margin: 0px 10px;
+  position: relative;
+}
+.movieListItemImg {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+  background-position: center;
+}
+.movieListItem:hover .movieListItemImg {
+  transform: scale(1.2);
+  margin: 0px 20px;
+  opacity: 0.5;
+}
+.movieList {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+.movieListItemTitel {
+  background-color: rgb(28, 26, 26);
+  font-size: 32px;
+  font-weight: 600;
+  color: rgb(243, 238, 238);
+  position: absolute;
+  top: 20%;
+  left: 20px;
+  padding: 0 10px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.movieListItemDesc {
+  background-color: rgb(27, 26, 26);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(249, 244, 244);
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  width: 250px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.movieListItemButton {
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 20px;
+  border: none;
+  background-color: green;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.movieListItem:hover .movieListItemTitel,
+.movieListItem:hover .movieListItemDesc,
+.movieListItem:hover .movieListItemButton {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 120px;
+  top: 75px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container.active{
+  background-color: white;
+  color: black;
+}
+
+.navbar-container.active{
+  background-color: white;
+  color: black;
+}
+.sidebar.active{
+  background-color: white;
+ 
+}
+.leftMenuIcon.active{
+  color: black;
+}
+.toggle.active{
+  background-color: black;
+
+}
+.toggleBall.active{
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width:400px){
+  .menu-container{
+    display: none;
+  }
+
+  .featureContent{
+    padding: 30px;
+    width: 80%;
+    height: 50%;
+  }
+  .featureTitle{
+    width: 100px;
+  }
+  .featureDesc{
+    display: none;
+  }
+
+}
